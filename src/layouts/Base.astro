@@ -92,6 +92,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
       img { max-width: 100%; height: auto; display: block; }
 
+      /* 防止任何元素撐破手機寬度 */
+      html, body { overflow-x: hidden; width: 100%; }
+      main { overflow-x: hidden; }
+
+      /* 全域圖片背景覆蓋 */
+      .hero-bg, .mid-banner-bg {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        max-width: none !important;
+      }
+
       ::selection {
         background: var(--gold-light);
         color: var(--ink);

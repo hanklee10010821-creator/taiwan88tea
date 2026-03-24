@@ -563,10 +563,16 @@ const posts = (await getCollection('blog')).sort(
     }
     .hero-stats { gap: 1rem; }
 
+    .features-bar { overflow-x: hidden; }
     .features-inner {
-      justify-content: flex-start;
-      gap: 1.5rem;
-      padding: 0 0.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem 0.5rem;
+      padding: 0;
+    }
+    .feature-item {
+      justify-content: center;
+      font-size: 0.78rem;
     }
 
     .philosophy-layout {
