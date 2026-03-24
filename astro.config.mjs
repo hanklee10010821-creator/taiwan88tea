@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://taiwan88tea.tw',
+  site: 'https://88tea.tw',
   markdown: {
     shikiConfig: { theme: 'github-light' },
   },

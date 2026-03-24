@@ -11,17 +11,12 @@ const posts = (await getCollection('blog')).sort(
 
   <!-- Hero -->
   <section class="hero">
+    <img src="/images/hero-tea.jpg" alt="台灣高山茶" class="hero-bg" loading="eager" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-badge">EST. 88茶葉</div>
-      <h1>
-        <span class="hero-small">來自台灣高山的</span>
-        <br/>好茶，宅配到家
-      </h1>
-      <div class="hero-divider">
-        <span class="divider-leaf">🍃</span>
-      </div>
-      <p class="hero-sub">梨山・阿里山・杉林溪・鹿谷<br/>海拔 1,000～2,600 公尺，產地直送到你手中</p>
+      <h1>來自台灣高山的<br/>好茶，宅配到家</h1>
+      <p class="hero-sub">梨山・阿里山・杉林溪・鹿谷<br/>海拔 1,000～2,600 公尺，產地直送</p>
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-num">7,500+</span>
@@ -44,32 +39,41 @@ const posts = (await getCollection('blog')).sort(
     </div>
   </section>
 
+  <!-- 特色橫條 -->
+  <section class="features-bar">
+    <div class="features-inner">
+      <div class="feature-item">
+        <span class="feature-icon">🏔️</span>
+        <span>產地直送</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">📦</span>
+        <span>貨到付款</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🔄</span>
+        <span>不滿意退費</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">💬</span>
+        <span>售後諮詢</span>
+      </div>
+    </div>
+  </section>
+
   <!-- 理念 -->
   <section class="philosophy">
     <div class="section-inner">
-      <div class="philosophy-grid">
+      <div class="philosophy-layout">
+        <div class="philosophy-img-wrap">
+          <img src="/images/tea-pour.jpg" alt="茶壺泡茶" loading="lazy" />
+        </div>
         <div class="philosophy-text">
           <span class="section-tag">我們的堅持</span>
-          <h2>從茶山到你的杯中<br/>每一步都用心</h2>
-          <p>我們相信，好茶不應該只在茶行才喝得到。透過產地直送、貨到付款，讓你在家就能輕鬆品嚐台灣頂級高山茶。</p>
-          <p>不滿意？全額退費。這是我們對品質的信心。</p>
-        </div>
-        <div class="philosophy-features">
-          <div class="phi-card">
-            <div class="phi-num">01</div>
-            <h3>產地直送</h3>
-            <p>台灣各大茶區高山茶，從產地到你手中，新鮮看得見。</p>
-          </div>
-          <div class="phi-card">
-            <div class="phi-num">02</div>
-            <h3>貨到付款</h3>
-            <p>收到茶再付款。今天寄，明天到。零風險的買茶體驗。</p>
-          </div>
-          <div class="phi-card">
-            <div class="phi-num">03</div>
-            <h3>售後服務</h3>
-            <p>不只賣茶，更教你泡茶。隨時 LINE 我們，持續為你服務。</p>
-          </div>
+          <h2>從茶山到你的杯中</h2>
+          <p>好茶不應該只在茶行才喝得到。透過產地直送、貨到付款，讓你在家就能輕鬆品嚐台灣頂級高山茶。</p>
+          <p><strong>不滿意？全額退費。</strong>這是我們對品質的信心。</p>
+          <a href="/about" class="text-link">了解更多 →</a>
         </div>
       </div>
     </div>
@@ -81,34 +85,48 @@ const posts = (await getCollection('blog')).sort(
       <div class="section-header">
         <span class="section-tag">嚴選茶區</span>
         <h2>台灣四大高山茶產區</h2>
-        <p class="section-desc">每一座山，都有它獨特的風味故事</p>
       </div>
       <div class="region-grid">
         <div class="region-card">
-          <div class="region-altitude">海拔 2,000m+</div>
-          <h3>梨山</h3>
-          <div class="region-line"></div>
-          <p>台灣最高茶區。果香清甜，喉韻深長，是高山茶的頂級代表。冷冽的空氣賦予茶葉獨特的清甜韻味。</p>
+          <div class="region-top">
+            <h3>梨山</h3>
+            <span class="region-alt">2,000m+</span>
+          </div>
+          <p>台灣最高茶區。果香清甜，喉韻深長，高山茶的頂級代表。</p>
         </div>
         <div class="region-card">
-          <div class="region-altitude">海拔 1,200m+</div>
-          <h3>阿里山</h3>
-          <div class="region-line"></div>
-          <p>雲霧繚繞的經典茶區。花香顯著、滋味甘醇，是最受歡迎的台灣高山茶。日出雲海間孕育的清雅茶香。</p>
+          <div class="region-top">
+            <h3>阿里山</h3>
+            <span class="region-alt">1,200m+</span>
+          </div>
+          <p>雲霧繚繞的經典茶區。花香顯著、滋味甘醇，最受歡迎的台灣茶。</p>
         </div>
         <div class="region-card">
-          <div class="region-altitude">海拔 1,600m+</div>
-          <h3>杉林溪</h3>
-          <div class="region-line"></div>
-          <p>杉木林環繞的秘境。帶有獨特的杉木清香，入口清爽不膩。山林的氣息融入每一片茶葉之中。</p>
+          <div class="region-top">
+            <h3>杉林溪</h3>
+            <span class="region-alt">1,600m+</span>
+          </div>
+          <p>杉木林環繞的秘境。獨特的杉木清香，入口清爽不膩。</p>
         </div>
         <div class="region-card">
-          <div class="region-altitude">海拔 800m+</div>
-          <h3>鹿谷</h3>
-          <div class="region-line"></div>
-          <p>凍頂烏龍的發源地。傳統炭焙工藝，濃郁焙火香，回甘持久。數十年傳承的製茶匠心。</p>
+          <div class="region-top">
+            <h3>鹿谷</h3>
+            <span class="region-alt">800m+</span>
+          </div>
+          <p>凍頂烏龍發源地。傳統炭焙工藝，濃郁焙火香，回甘持久。</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- 大圖 Banner -->
+  <section class="mid-banner">
+    <img src="/images/tea-leaves.jpg" alt="茶葉" class="mid-banner-bg" loading="lazy" />
+    <div class="mid-banner-overlay"></div>
+    <div class="mid-banner-content">
+      <span class="section-tag section-tag-light">品質承諾</span>
+      <h2>138 則五星好評<br/>7,500+ 茶友的選擇</h2>
+      <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="banner-cta">立即體驗 →</a>
     </div>
   </section>
 
@@ -119,15 +137,17 @@ const posts = (await getCollection('blog')).sort(
         <div class="section-header">
           <span class="section-tag">茶知識</span>
           <h2>讓每一杯都更好喝</h2>
-          <p class="section-desc">從泡茶技巧到茶葉選購，成為懂茶的人</p>
         </div>
-        <div class="post-grid">
+        <div class="post-list">
           {posts.map((post, i) => (
-            <a href={`/blog/${post.id}`} class="post-card">
-              <div class="post-num">{String(i + 1).padStart(2, '0')}</div>
-              <h3>{post.data.title}</h3>
-              <p>{post.data.description}</p>
-              <span class="post-link">閱讀全文 →</span>
+            <a href={`/blog/${post.id}`} class="post-item">
+              <div class="post-left">
+                <span class="post-num">{String(i + 1).padStart(2, '0')}</span>
+              </div>
+              <div class="post-right">
+                <h3>{post.data.title}</h3>
+                <span class="post-arrow">→</span>
+              </div>
             </a>
           ))}
         </div>
@@ -143,7 +163,7 @@ const posts = (await getCollection('blog')).sort(
     <div class="cta-inner">
       <span class="section-tag section-tag-light">開始品茶</span>
       <h2>想喝好茶？<br/>加我們 LINE 就對了</h2>
-      <p>專人為你推薦最適合的茶葉<br/>從選茶到泡茶，全程為你服務</p>
+      <p>專人為你推薦最適合的茶葉</p>
       <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="cta-btn">
         加 LINE 好友 →
       </a>
@@ -152,208 +172,197 @@ const posts = (await getCollection('blog')).sort(
 
 </Base>
 
-<style>
+<style is:global>
   /* ======= HERO ======= */
   .hero {
     position: relative;
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background:
-      linear-gradient(165deg,
-        #1a2618 0%,
-        #2d4228 25%,
-        #3a5234 50%,
-        #2d3a28 75%,
-        #1a2218 100%
-      );
+    background: #1a2618;
     overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
   }
   .hero-overlay {
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse at 30% 20%, rgba(200, 169, 110, 0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 70% 80%, rgba(200, 169, 110, 0.05) 0%, transparent 50%);
+      linear-gradient(180deg, rgba(26,38,24,0.3) 0%, rgba(26,38,24,0.1) 40%, rgba(26,38,24,0.6) 100%);
   }
   .hero-content {
     position: relative;
     z-index: 1;
     text-align: center;
-    padding: 2rem;
-    max-width: 800px;
+    padding: 6rem 1.5rem 3rem;
+    max-width: 700px;
     color: var(--white);
   }
   .hero-badge {
     display: inline-block;
-    font-size: 0.75rem;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
     color: var(--gold);
-    border: 1px solid rgba(200, 169, 110, 0.3);
-    padding: 0.4rem 1.5rem;
-    margin-bottom: 2.5rem;
+    border: 1px solid rgba(200,169,110,0.3);
+    padding: 0.35rem 1.2rem;
+    margin-bottom: 2rem;
   }
   .hero h1 {
     font-family: var(--font-serif);
-    font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+    font-size: clamp(1.8rem, 6vw, 3.5rem);
     font-weight: 700;
-    letter-spacing: 0.06em;
-    line-height: 1.3;
-    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
   }
-  .hero-small {
-    font-size: 0.5em;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    color: rgba(255,255,255,0.7);
-    display: block;
-    margin-bottom: 0.3rem;
-  }
-  .hero-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  .hero-divider::before,
-  .hero-divider::after {
-    content: '';
-    width: 60px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  }
-  .divider-leaf { font-size: 1rem; opacity: 0.6; }
   .hero-sub {
-    font-size: 1rem;
-    color: rgba(255,255,255,0.65);
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
     line-height: 1.8;
-    letter-spacing: 0.06em;
-    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
   }
   .hero-stats {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
   }
   .stat { text-align: center; }
   .stat-num {
     display: block;
     font-family: var(--font-serif);
-    font-size: 1.8rem;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
     font-weight: 700;
     color: var(--gold);
-    letter-spacing: 0.02em;
   }
   .stat-label {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.08em;
   }
   .stat-divider {
     width: 1px;
-    height: 40px;
-    background: rgba(200, 169, 110, 0.2);
+    height: 32px;
+    background: rgba(200,169,110,0.2);
   }
   .hero-cta {
     display: inline-block;
     background: var(--gold);
     color: var(--ink) !important;
-    padding: 1rem 3rem;
+    padding: 0.9rem 2.5rem;
     font-family: var(--font-serif);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     transition: all var(--transition);
   }
   .hero-cta:hover {
     background: var(--gold-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(200, 169, 110, 0.3);
+    box-shadow: 0 8px 30px rgba(200,169,110,0.3);
   }
 
-  /* ======= SECTIONS ======= */
+  /* ======= FEATURES BAR ======= */
+  .features-bar {
+    background: var(--ink);
+    padding: 1.2rem 1.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .features-inner {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .feature-icon { font-size: 1rem; }
+
+  /* ======= SECTIONS COMMON ======= */
   .section-inner {
     max-width: var(--content-width);
     margin: 0 auto;
-    padding: var(--section-pad) 2rem;
+    padding: var(--section-pad) 1.5rem;
   }
   .section-header {
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
   }
   .section-tag {
     display: inline-block;
-    font-size: 0.7rem;
-    letter-spacing: 0.35em;
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold-dark);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     font-weight: 500;
   }
   .section-tag-light { color: var(--gold-light); }
   .section-header h2 {
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-size: clamp(1.4rem, 4vw, 2rem);
     color: var(--ink);
-    margin-bottom: 0.8rem;
-  }
-  .section-desc {
-    color: var(--ink-muted);
-    font-size: 0.95rem;
-    letter-spacing: 0.03em;
+    margin-bottom: 0.5rem;
   }
 
   /* ======= PHILOSOPHY ======= */
   .philosophy {
     background: var(--white);
-    border-top: 1px solid var(--cream);
-    border-bottom: 1px solid var(--cream);
-    padding-top: 1rem;
   }
-  .philosophy-grid {
+  .philosophy-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
   }
-  .philosophy-text .section-tag { margin-bottom: 1rem; }
+  .philosophy-img-wrap {
+    overflow: hidden;
+  }
+  .philosophy-img-wrap img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+  .philosophy-text .section-tag { margin-bottom: 0.8rem; }
   .philosophy-text h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    margin-bottom: 1.2rem;
     color: var(--ink);
   }
   .philosophy-text p {
     color: var(--ink-muted);
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-    line-height: 1.9;
+    margin-bottom: 0.8rem;
+    font-size: 0.92rem;
+    line-height: 1.85;
   }
-  .phi-card {
-    padding: 1.8rem 0;
-    border-bottom: 1px solid var(--cream);
-  }
-  .phi-card:last-child { border-bottom: none; }
-  .phi-num {
-    font-family: var(--font-serif);
+  .philosophy-text strong { color: var(--ink); }
+  .text-link {
+    display: inline-block;
+    margin-top: 0.5rem;
     font-size: 0.85rem;
-    color: var(--gold);
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
+    color: var(--gold-dark);
+    font-weight: 500;
+    letter-spacing: 0.04em;
   }
-  .phi-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.4rem;
-    color: var(--ink);
-  }
-  .phi-card p {
-    font-size: 0.9rem;
-    color: var(--ink-muted);
-    line-height: 1.7;
-  }
+  .text-link:hover { color: var(--ink); }
 
   /* ======= REGIONS ======= */
   .regions {
@@ -361,168 +370,235 @@ const posts = (await getCollection('blog')).sort(
   }
   .region-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
   .region-card {
     background: var(--white);
-    padding: 2.5rem 2rem;
+    padding: 2rem 1.5rem;
     border: 1px solid var(--cream);
     transition: all var(--transition);
-    position: relative;
   }
   .region-card:hover {
     border-color: var(--gold-light);
     box-shadow: var(--shadow-md);
-    transform: translateY(-4px);
   }
-  .region-altitude {
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold-dark);
+  .region-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     margin-bottom: 0.8rem;
   }
   .region-card h3 {
     font-family: var(--font-serif);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--ink);
-    margin-bottom: 0.8rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
   }
-  .region-line {
-    width: 30px;
-    height: 1px;
-    background: var(--gold);
-    margin-bottom: 1rem;
+  .region-alt {
+    font-size: 0.65rem;
+    color: var(--gold-dark);
+    letter-spacing: 0.15em;
+    font-weight: 500;
   }
   .region-card p {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: var(--ink-muted);
-    line-height: 1.75;
+    line-height: 1.7;
+  }
+
+  /* ======= MID BANNER ======= */
+  .mid-banner {
+    position: relative;
+    padding: 5rem 1.5rem;
+    overflow: hidden;
+    background: #1a2618;
+  }
+  .mid-banner-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+  }
+  .mid-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(26,38,24,0.7), rgba(45,66,40,0.5));
+  }
+  .mid-banner-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--white);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .mid-banner-content h2 {
+    font-size: clamp(1.4rem, 4.5vw, 2rem);
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  .banner-cta {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold) !important;
+    padding: 0.7rem 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    transition: all var(--transition);
+  }
+  .banner-cta:hover {
+    background: var(--gold);
+    color: var(--ink) !important;
   }
 
   /* ======= BLOG ======= */
   .blog-section {
     background: var(--white);
-    border-top: 1px solid var(--cream);
   }
-  .post-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  .post-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .post-item {
+    display: flex;
+    align-items: center;
     gap: 1.5rem;
-  }
-  .post-card {
-    display: block;
-    padding: 2.5rem 2rem;
-    border: 1px solid var(--cream);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--cream);
     color: var(--ink);
     transition: all var(--transition);
-    background: var(--parchment);
   }
-  .post-card:hover {
-    color: var(--ink);
-    border-color: var(--gold-light);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-4px);
-  }
+  .post-item:first-child { border-top: 1px solid var(--cream); }
+  .post-item:hover { color: var(--ink); }
+  .post-item:hover .post-num { color: var(--gold); }
+  .post-item:hover .post-arrow { color: var(--gold); transform: translateX(4px); }
+  .post-left { flex-shrink: 0; }
   .post-num {
     font-family: var(--font-serif);
-    font-size: 2rem;
-    color: var(--cream);
+    font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    color: var(--cream);
     transition: color var(--transition);
   }
-  .post-card:hover .post-num { color: var(--gold-light); }
-  .post-card h3 {
-    font-size: 1.05rem;
-    margin-bottom: 0.8rem;
+  .post-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .post-item h3 {
+    font-size: 0.95rem;
     line-height: 1.5;
     color: var(--ink);
-  }
-  .post-card p {
-    font-size: 0.85rem;
-    color: var(--ink-muted);
-    line-height: 1.7;
-    margin-bottom: 1.2rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .post-link {
-    font-size: 0.8rem;
-    color: var(--gold-dark);
-    letter-spacing: 0.05em;
     font-weight: 500;
+  }
+  .post-arrow {
+    flex-shrink: 0;
+    color: var(--cream);
+    font-size: 1.1rem;
+    transition: all var(--transition);
   }
   .section-more {
     text-align: center;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
   }
   .more-link {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--gold-dark);
     font-weight: 500;
     letter-spacing: 0.05em;
   }
-  .more-link:hover { color: var(--ink); }
 
   /* ======= CTA ======= */
   .cta-section {
-    background:
-      linear-gradient(165deg,
-        #1a2618 0%,
-        #2d4228 40%,
-        #1a2218 100%
-      );
+    background: linear-gradient(165deg, #1a2618 0%, #2d4228 40%, #1a2218 100%);
     color: var(--white);
     text-align: center;
   }
   .cta-inner {
     max-width: 600px;
     margin: 0 auto;
-    padding: var(--section-pad) 2rem;
+    padding: var(--section-pad) 1.5rem;
   }
   .cta-inner h2 {
-    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-size: clamp(1.4rem, 4vw, 2rem);
     color: var(--white);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
   .cta-inner p {
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 2.5rem;
-    line-height: 1.8;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 2rem;
     letter-spacing: 0.04em;
   }
   .cta-btn {
     display: inline-block;
     background: var(--gold);
     color: var(--ink) !important;
-    padding: 1rem 3rem;
+    padding: 0.9rem 2.5rem;
     font-family: var(--font-serif);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     transition: all var(--transition);
   }
   .cta-btn:hover {
     background: var(--gold-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(200, 169, 110, 0.3);
   }
 
   /* ======= MOBILE ======= */
-  @media (max-width: 1024px) {
-    .region-grid { grid-template-columns: repeat(2, 1fr); }
-  }
   @media (max-width: 768px) {
-    .hero { min-height: 90vh; }
-    .hero-stats { gap: 1.2rem; }
-    .stat-num { font-size: 1.4rem; }
-    .philosophy-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .region-grid { grid-template-columns: 1fr; }
-    .post-grid { grid-template-columns: 1fr; }
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+    }
+    .hero-content {
+      padding: 5rem 1.5rem 2.5rem;
+    }
+    .hero-stats { gap: 1rem; }
+
+    .features-inner {
+      justify-content: flex-start;
+      gap: 1.5rem;
+      padding: 0 0.5rem;
+    }
+
+    .philosophy-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .philosophy-img-wrap img {
+      height: 280px;
+    }
+
+    .region-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .region-card {
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+    }
+    .region-card + .region-card {
+      border-top: none;
+    }
+
+    .mid-banner { padding: 4rem 1.5rem; }
+
+    .post-item { gap: 1rem; }
+    .post-num { font-size: 1.4rem; }
+    .post-item h3 { font-size: 0.88rem; }
+  }
+
+  /* ======= DESKTOP ======= */
+  @media (min-width: 1025px) {
+    .region-grid { grid-template-columns: repeat(4, 1fr); }
   }
 </style>
