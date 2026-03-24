@@ -1,0 +1,143 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+---
+
+<Base title="茶知識｜88茶葉部落格" description="學習台灣茶的知識，從泡茶技巧到茶葉保存，讓你每一杯都更好喝。">
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="tag">TEA JOURNAL</span>
+      <h1>茶知識</h1>
+      <p>從泡茶技巧到茶葉選購，成為懂茶的人</p>
+    </div>
+  </section>
+
+  <section class="blog-list">
+    <div class="blog-inner">
+      {posts.length === 0 && <p class="no-posts">文章準備中，敬請期待。</p>}
+      {posts.map((post, i) => (
+        <a href={`/blog/${post.id}`} class="blog-card">
+          <div class="blog-num">{String(i + 1).padStart(2, '0')}</div>
+          <div class="blog-body">
+            <h2>{post.data.title}</h2>
+            <p>{post.data.description}</p>
+            <div class="blog-meta">
+              <span class="blog-date">{new Date(post.data.date).toLocaleDateString('zh-TW')}</span>
+              {post.data.tags && post.data.tags.map((tag: string) => (
+                <span class="blog-tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+          <span class="blog-arrow">→</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .page-hero {
+    background: linear-gradient(165deg, #1a2618 0%, #2d4228 40%, #1a2218 100%);
+    color: var(--white);
+    text-align: center;
+    padding: calc(var(--section-pad) + 3rem) 2rem var(--section-pad);
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .page-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.06em;
+  }
+  .page-hero p {
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.05em;
+  }
+
+  .blog-inner {
+    max-width: var(--narrow-width);
+    margin: 0 auto;
+    padding: var(--section-pad) 2rem;
+  }
+  .no-posts {
+    text-align: center;
+    color: var(--ink-muted);
+  }
+  .blog-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--cream);
+    color: var(--ink);
+    transition: all var(--transition);
+  }
+  .blog-card:first-child { padding-top: 0; }
+  .blog-card:hover { color: var(--ink); }
+  .blog-card:hover .blog-num { color: var(--gold); }
+  .blog-card:hover .blog-arrow { color: var(--gold); transform: translateX(4px); }
+  .blog-num {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--cream);
+    flex-shrink: 0;
+    width: 60px;
+    transition: color var(--transition);
+  }
+  .blog-body { flex: 1; }
+  .blog-body h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .blog-body p {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+  }
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .blog-date {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+  }
+  .blog-tag {
+    font-size: 0.7rem;
+    background: var(--cream);
+    color: var(--ink-muted);
+    padding: 0.15rem 0.6rem;
+    letter-spacing: 0.03em;
+  }
+  .blog-arrow {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--cream);
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+    transition: all var(--transition);
+  }
+
+  @media (max-width: 768px) {
+    .blog-num { font-size: 1.8rem; width: 40px; }
+    .blog-card { gap: 1rem; }
+  }
+</style>

@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="關於我們｜88茶葉" description="認識88茶葉，我們專注於提供台灣高山茶宅配服務，從梨山、阿里山、杉林溪到鹿谷，產地直送到你家。">
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="section-tag section-tag-light">ABOUT US</span>
+      <h1>關於八八茶葉</h1>
+      <p>用心做好茶，讓每個人都喝得到台灣好茶</p>
+    </div>
+  </section>
+
+  <section class="about-content">
+    <div class="about-inner">
+
+      <div class="about-block">
+        <div class="about-num">01</div>
+        <h2>我們的故事</h2>
+        <p>88 茶葉專注於台灣高山茶的宅配服務。我們相信，好茶不應該只在茶行才喝得到。</p>
+        <p>透過產地直送、貨到付款的方式，讓每個人在家就能輕鬆享受台灣頂級高山茶。從茶山到你的杯中，我們用心守護每一片茶葉的品質。</p>
+      </div>
+
+      <div class="about-divider"></div>
+
+      <div class="about-block">
+        <div class="about-num">02</div>
+        <h2>嚴選茶區</h2>
+        <p>我們的茶葉來自台灣最知名的高山茶產區：</p>
+        <ul class="about-list">
+          <li><strong>梨山</strong> — 海拔 2,000m+，台灣最高茶區，果香清甜</li>
+          <li><strong>阿里山</strong> — 雲霧環繞，花香甘醇，經典中的經典</li>
+          <li><strong>杉林溪</strong> — 杉木林間，獨特清香，清爽不膩</li>
+          <li><strong>鹿谷</strong> — 凍頂烏龍發源地，傳統焙火，回甘持久</li>
+        </ul>
+      </div>
+
+      <div class="about-divider"></div>
+
+      <div class="about-block">
+        <div class="about-num">03</div>
+        <h2>7,500+ 茶友的信任</h2>
+        <p>感謝超過 7,500 位茶友的支持，以及 138 則五星好評的肯定。</p>
+        <p>我們承諾：<strong>不滿意保證退費</strong>。這是我們對品質的自信，也是對你的尊重。</p>
+      </div>
+
+      <div class="about-divider"></div>
+
+      <div class="about-block">
+        <div class="about-num">04</div>
+        <h2>怎麼買？</h2>
+        <p>選茶、下單、諮詢，全部透過 LINE 完成：</p>
+        <ol class="about-steps">
+          <li>加入我們的 <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener">LINE 官方帳號</a></li>
+          <li>告訴我們你喜歡什麼口味的茶</li>
+          <li>我們推薦最適合你的選擇</li>
+          <li>貨到付款，收到再付錢</li>
+        </ol>
+        <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="about-cta">加 LINE 好友開始選茶 →</a>
+      </div>
+
+      <div class="about-divider"></div>
+
+      <div class="about-block">
+        <div class="about-num">05</div>
+        <h2>找到我們</h2>
+        <div class="social-grid">
+          <a href="https://www.facebook.com/taiwan88tea/" target="_blank" rel="noopener" class="social-card">
+            <span class="social-icon">📘</span>
+            <span>Facebook 粉絲專頁</span>
+          </a>
+          <a href="https://www.instagram.com/taiwan88tea/" target="_blank" rel="noopener" class="social-card">
+            <span class="social-icon">📸</span>
+            <span>Instagram</span>
+          </a>
+          <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="social-card">
+            <span class="social-icon">💬</span>
+            <span>LINE 官方帳號</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .page-hero {
+    background: linear-gradient(165deg, #1a2618 0%, #2d4228 40%, #1a2218 100%);
+    color: var(--white);
+    text-align: center;
+    padding: calc(var(--section-pad) + 3rem) 2rem var(--section-pad);
+  }
+  .page-hero .section-tag-light {
+    color: var(--gold);
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+  }
+  .page-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.06em;
+  }
+  .page-hero p {
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .about-inner {
+    max-width: var(--narrow-width);
+    margin: 0 auto;
+    padding: var(--section-pad) 2rem;
+  }
+  .about-block { padding: 1rem 0; }
+  .about-num {
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+  }
+  .about-block h2 {
+    font-size: 1.5rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .about-block p {
+    color: var(--ink-muted);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 0.8rem;
+  }
+  .about-block strong { color: var(--ink); }
+  .about-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold-light);
+    margin: 2.5rem 0;
+  }
+  .about-list, .about-steps {
+    padding-left: 1.5rem;
+    margin: 0.8rem 0;
+  }
+  .about-list li, .about-steps li {
+    color: var(--ink-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+  }
+  .about-cta {
+    display: inline-block;
+    background: var(--tea-green);
+    color: var(--white) !important;
+    padding: 0.8rem 2rem;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-top: 1.5rem;
+    transition: all var(--transition);
+  }
+  .about-cta:hover {
+    background: var(--tea-green-deep);
+    transform: translateY(-2px);
+  }
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    border: 1px solid var(--cream);
+    color: var(--ink-muted);
+    font-size: 0.9rem;
+    transition: all var(--transition);
+  }
+  .social-card:hover {
+    border-color: var(--gold-light);
+    color: var(--ink);
+    box-shadow: var(--shadow-sm);
+  }
+  .social-icon { font-size: 1.5rem; }
+
+  @media (max-width: 768px) {
+    .social-grid { grid-template-columns: 1fr; }
+  }
+</style>

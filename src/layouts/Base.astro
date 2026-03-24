@@ -1,0 +1,376 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title, description = '88茶葉｜台灣高山茶宅配到府，梨山、阿里山、杉林溪、鹿谷茶葉直送。不滿意保證退費！', ogImage } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL.href} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <style is:global>
+      :root {
+        /* 精品茶葉色彩系統 */
+        --ink: #1a1612;
+        --ink-light: #3d3530;
+        --ink-muted: #6b5e54;
+        --parchment: #faf7f2;
+        --parchment-warm: #f5efe6;
+        --cream: #ede5d8;
+        --gold: #c8a96e;
+        --gold-light: #dfc9a0;
+        --gold-dark: #a68b4b;
+        --tea-green: #4a6741;
+        --tea-green-deep: #2d4228;
+        --tea-green-light: #6b8c62;
+        --tea-amber: #8b6914;
+        --tea-red: #8b3a3a;
+        --white: #ffffff;
+
+        /* Typography */
+        --font-serif: 'Noto Serif TC', 'Georgia', serif;
+        --font-sans: 'Noto Sans TC', 'Helvetica Neue', sans-serif;
+
+        /* Spacing */
+        --section-pad: clamp(3rem, 8vw, 6rem);
+        --content-width: 1100px;
+        --narrow-width: 780px;
+
+        /* Effects */
+        --shadow-sm: 0 1px 3px rgba(26,22,18,0.06);
+        --shadow-md: 0 4px 16px rgba(26,22,18,0.08);
+        --shadow-lg: 0 8px 32px rgba(26,22,18,0.12);
+        --radius: 4px;
+        --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: var(--font-sans);
+        color: var(--ink);
+        background: var(--parchment);
+        line-height: 1.85;
+        font-weight: 400;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: var(--font-serif);
+        font-weight: 600;
+        line-height: 1.35;
+        letter-spacing: 0.02em;
+      }
+
+      a {
+        color: var(--tea-green);
+        text-decoration: none;
+        transition: color var(--transition);
+      }
+      a:hover { color: var(--gold-dark); }
+
+      img { max-width: 100%; height: auto; display: block; }
+
+      ::selection {
+        background: var(--gold-light);
+        color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="/" class="logo">
+          <span class="logo-cn">八八茶葉</span>
+          <span class="logo-en">88 TEA</span>
+        </a>
+        <div class="nav-links">
+          <a href="/">首頁</a>
+          <a href="/about">關於我們</a>
+          <a href="/blog">茶知識</a>
+          <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="nav-cta">
+            <span class="nav-cta-icon">💬</span> LINE 訂購
+          </a>
+        </div>
+        <button class="menu-toggle" aria-label="選單" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="footer-logo">八八茶葉</div>
+            <p class="footer-tagline">台灣高山茶・宅配到府</p>
+            <p class="footer-desc">梨山、阿里山、杉林溪、鹿谷<br/>產地直送・不滿意保證退費</p>
+          </div>
+          <div class="footer-col">
+            <h4>瀏覽</h4>
+            <a href="/about">關於我們</a>
+            <a href="/blog">茶知識</a>
+          </div>
+          <div class="footer-col">
+            <h4>聯絡</h4>
+            <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener">LINE 官方帳號</a>
+            <a href="https://www.facebook.com/taiwan88tea/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/taiwan88tea/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} 88茶葉 All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- LINE 浮動按鈕 -->
+    <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="line-float" aria-label="LINE 聯絡我們">
+      💬 LINE 訂購
+    </a>
+
+    <style>
+      /* ======= NAV ======= */
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(250, 247, 242, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(200, 169, 110, 0.15);
+      }
+      .nav-inner {
+        max-width: var(--content-width);
+        margin: 0 auto;
+        padding: 0.9rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+        color: var(--ink) !important;
+      }
+      .logo:hover { color: var(--tea-green) !important; }
+      .logo-cn {
+        font-family: var(--font-serif);
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+      }
+      .logo-en {
+        font-size: 0.65rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      .nav-links a {
+        font-size: 0.9rem;
+        color: var(--ink-muted);
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        position: relative;
+      }
+      .nav-links a:not(.nav-cta)::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--gold);
+        transition: width var(--transition);
+      }
+      .nav-links a:not(.nav-cta):hover::after { width: 100%; }
+      .nav-links a:not(.nav-cta):hover { color: var(--ink); }
+      .nav-cta {
+        background: var(--tea-green);
+        color: var(--white) !important;
+        padding: 0.5rem 1.3rem;
+        border-radius: 2px;
+        font-weight: 500;
+        font-size: 0.85rem;
+        letter-spacing: 0.05em;
+        transition: all var(--transition);
+      }
+      .nav-cta:hover {
+        background: var(--tea-green-deep);
+        color: var(--white) !important;
+      }
+      .nav-cta-icon { margin-right: 0.3rem; }
+
+      /* Hamburger */
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        width: 28px;
+        height: 24px;
+        position: relative;
+      }
+      .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: var(--ink);
+        position: absolute;
+        left: 0;
+        transition: all 0.3s;
+      }
+      .menu-toggle span:nth-child(1) { top: 2px; }
+      .menu-toggle span:nth-child(2) { top: 11px; }
+      .menu-toggle span:nth-child(3) { top: 20px; }
+      .menu-toggle.active span:nth-child(1) { top: 11px; transform: rotate(45deg); }
+      .menu-toggle.active span:nth-child(2) { opacity: 0; }
+      .menu-toggle.active span:nth-child(3) { top: 11px; transform: rotate(-45deg); }
+
+      /* ======= FOOTER ======= */
+      .footer { margin-top: 0; }
+      .footer-top {
+        background: var(--ink);
+        color: rgba(255,255,255,0.8);
+        padding: 4rem 2rem 3rem;
+      }
+      .footer-inner {
+        max-width: var(--content-width);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 3rem;
+      }
+      .footer-logo {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: 0.15em;
+        margin-bottom: 0.5rem;
+      }
+      .footer-tagline {
+        font-size: 0.85rem;
+        color: var(--gold);
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+      }
+      .footer-desc {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: rgba(255,255,255,0.5);
+      }
+      .footer-col h4 {
+        font-family: var(--font-serif);
+        color: var(--white);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.08em;
+      }
+      .footer-col a {
+        display: block;
+        color: rgba(255,255,255,0.6);
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+        transition: color var(--transition);
+      }
+      .footer-col a:hover { color: var(--gold-light); }
+      .footer-bottom {
+        background: rgba(0,0,0,0.3);
+        text-align: center;
+        padding: 1rem 2rem;
+        font-size: 0.8rem;
+        color: rgba(255,255,255,0.3);
+        background: #141210;
+      }
+
+      /* ======= LINE FLOAT ======= */
+      .line-float {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: var(--tea-green);
+        color: var(--white) !important;
+        padding: 0.85rem 1.6rem;
+        border-radius: 2px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        box-shadow: var(--shadow-lg);
+        z-index: 99;
+        transition: all var(--transition);
+      }
+      .line-float:hover {
+        background: var(--tea-green-deep);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px rgba(26,22,18,0.2);
+      }
+
+      /* ======= MOBILE ======= */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(250, 247, 242, 0.98);
+          backdrop-filter: blur(12px);
+          padding: 1.5rem 2rem;
+          gap: 1.2rem;
+          border-bottom: 1px solid rgba(200,169,110,0.15);
+        }
+        .nav-links.open { display: flex; }
+        .menu-toggle { display: block; }
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .line-float {
+          bottom: 1rem;
+          right: 1rem;
+          padding: 0.7rem 1.2rem;
+          font-size: 0.85rem;
+        }
+      }
+    </style>
+  </body>
+</html>
