@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 2500px;
+    height: 1686px;
+    font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background: #1a2618;
+  }
+  .cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid rgba(200,169,110,0.15);
+    cursor: pointer;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Top row - selling */
+  .cell.top {
+    background: linear-gradient(165deg, #2d4228 0%, #1a2618 100%);
+  }
+  /* Bottom row - trust */
+  .cell.bottom {
+    background: linear-gradient(165deg, #1e2a1c 0%, #151e13 100%);
+  }
+  .cell .icon {
+    font-size: 140px;
+    line-height: 1;
+  }
+  .cell .title {
+    font-size: 110px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.12em;
+  }
+  .cell .subtitle {
+    display: none;
+  }
+  /* Highlight the main CTA */
+  .cell.cta {
+    background: linear-gradient(165deg, #c8a96e 0%, #a68b4b 100%);
+  }
+  .cell.cta .title {
+    color: #1a2618;
+  }
+  .cell.cta .subtitle {
+    color: rgba(26,38,24,0.6);
+  }
+  /* Gold accent for seasonal */
+  .cell.seasonal {
+    background: linear-gradient(165deg, #3a5234 0%, #2d4228 100%);
+    border-color: rgba(200,169,110,0.3);
+  }
+  .cell.seasonal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #c8a96e, transparent);
+  }
+  .badge {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    background: #c8a96e;
+    color: #1a2618;
+    font-size: 34px;
+    font-weight: 700;
+    padding: 8px 24px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Row 1: Selling -->
+  <div class="cell seasonal top">
+    <span class="badge">NEW</span>
+    <span class="icon">🍵</span>
+    <span class="title">當季新茶</span>
+    <span class="subtitle">最新優惠</span>
+  </div>
+  <div class="cell top">
+    <span class="icon">🏔️</span>
+    <span class="title">茶品總覽</span>
+    <span class="subtitle">認識我們的茶</span>
+  </div>
+  <div class="cell cta top">
+    <span class="icon">🛒</span>
+    <span class="title">我要訂購</span>
+    <span class="subtitle">立即下單</span>
+  </div>
+
+  <!-- Row 2: Trust -->
+  <div class="cell bottom">
+    <span class="icon">📖</span>
+    <span class="title">茶知識</span>
+    <span class="subtitle">學泡好茶</span>
+  </div>
+  <div class="cell bottom">
+    <span class="icon">⭐</span>
+    <span class="title">客戶好評</span>
+    <span class="subtitle">100% 推薦</span>
+  </div>
+  <div class="cell bottom">
+    <span class="icon">💬</span>
+    <span class="title">聯絡客服</span>
+    <span class="subtitle">有問必答</span>
+  </div>
+</body>
+</html>

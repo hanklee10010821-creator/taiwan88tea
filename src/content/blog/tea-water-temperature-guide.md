@@ -73,3 +73,11 @@ tags: ["泡茶技巧", "新手入門"]
 ---
 
 *想試試用正確水溫泡出的台灣高山茶有多好喝？[加我們 LINE](https://line.me/ti/p/%40wgc0409f)，讓我們推薦最適合你的茶葉！*
+
+---
+
+<div style="background: #f5efe6; padding: 2rem; border-radius: 8px; margin-top: 2rem; text-align: center; border: 1px solid #c8a96e;">
+  <h3 style="color: #a68b4b; margin-top: 0; font-size: 1.3rem;">👇 懂茶的你，現在正是喝春茶的最佳時機！</h3>
+  <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">88茶葉【2026早春高山茶】新鮮上市。阿里山/杉林溪 <strong>買2送1</strong>，免運貨到付款。</p>
+  <a href="https://line.me/ti/p/%40wgc0409f" style="display: inline-block; background: #4a6741; color: white; padding: 0.8rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 1rem; transition: background 0.3s;">點擊加 LINE，立刻挑選您的專屬好茶 →</a>
+</div>
