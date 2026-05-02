@@ -136,6 +136,41 @@ const posts = (await getCollection('blog')).sort(
     </div>
   </section>
 
+  
+  <!-- 品牌歷史回顧 (自動同步FB) -->
+  <section class="fb-history-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">品牌足跡</span>
+        <h2>茶友們共同見證的好味道</h2>
+      </div>
+      <div class="history-grid">
+
+        <div class="history-card">
+          <div class="history-img"><img src="https://scontent.ftpe7-2.fna.fbcdn.net/v/t39.30808-6/685148293_1407256668087467_2708897760502781629_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=13d280&_nc_ohc=jlYTgEG7KTYQ7kNvwHqqKb8&_nc_oc=Adr5QQcq85SBRvoCbbEMjLwUwicce5-bRqWH4xSwaIHENSJ2X24VTk4vOiMyW_dEXKI&_nc_zt=23&_nc_ht=scontent.ftpe7-2.fna&edm=AKIiGfEEAAAA&_nc_gid=LgatK9sjKl3v_kKUiqhKuw&_nc_tpa=Q5bMBQF9ArfQP2G16uzeXY3LB7qoJEX99c-VjribBzpUWYX2c89NafHzkaXrvJJLzsbA46xQUqTmYL5h&oh=00_Af6tmx1R9mW9KoRHo6P_FuhUvB9PEljbU0yTZVwqaQa6wQ&oe=69FB8744" alt="FB Post" loading="lazy" /></div>
+          <div class="history-content">
+            <p>"【今年春茶，你選阿里山還是杉林溪？🤔】  很多茶友私訊問我們：「老闆，阿里山跟杉林溪到底差在哪？我怕苦澀該喝哪一種？」 ..."</p>
+            <span class="history-date">Facebook 粉絲團貼文</span>
+          </div>
+        </div>
+        <div class="history-card">
+          <div class="history-img"><img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/673502681_1395568749256259_2104911829219690645_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=fpmF6-NR42YQ7kNvwHNaLvA&_nc_oc=AdqUxpyNayoTRGgs_Tz2hYUMZOjb0u8Q177wKVblLb0636uj4Dg86zLpnpe7ZMVcijQ&_nc_zt=23&_nc_ht=scontent.ftpe7-1.fna&edm=AKIiGfEEAAAA&_nc_gid=LgatK9sjKl3v_kKUiqhKuw&_nc_tpa=Q5bMBQGauKLLgwufjEzhmZdMxVrt3BjD7hgmiyLKYCtCFMjliB3GZOxUxdwNBodJziYGPey3qG8XVlfs&oh=00_Af5FY3uC9JshZMJEG_ttTp9bXJMdL6vZv5Ib32Y7OCFYjg&oe=69FB8116" alt="FB Post" loading="lazy" /></div>
+          <div class="history-content">
+            <p>"☁️ 海拔 2,000 公尺以上，雲霧繚繞 梨山高冷茶，台灣頂級高山茶的代表  果香清甜、喉韻深長 每一口，都是山林給你..."</p>
+            <span class="history-date">Facebook 粉絲團貼文</span>
+          </div>
+        </div>
+        <div class="history-card">
+          <div class="history-img"><img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/668857487_1389052589907875_9016622297629417418_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=102&ccb=1-7&_nc_sid=13d280&_nc_ohc=fiFJY-RBt18Q7kNvwF4Lhb1&_nc_oc=AdqzD2haxZOwhAwLPD_sgxi9wITv5OjHnzTN31MzhMu65LSjxyGQjAnEFU2fTOZDGpY&_nc_zt=23&_nc_ht=scontent.ftpe7-3.fna&edm=AKIiGfEEAAAA&_nc_gid=LgatK9sjKl3v_kKUiqhKuw&_nc_tpa=Q5bMBQEyFVlpnYmTfQlgH5X5IJ2Zk4TCJ4tRP_LQlk8iXeCkn4edPyQ15GLQvrLeOsb-_bGjljIdHcxE&oh=00_Af7Y53_xr5Rhv5l9bshox250jLQvV7iFaOeckpR6zH9nUQ&oe=69FB8948" alt="FB Post" loading="lazy" /></div>
+          <div class="history-content">
+            <p>"茶香裡的慢時光：尋找內心的寧靜片刻  午後的陽光灑落，溫潤的茶香在空氣中輕輕蔓延。此刻，時間彷彿慢了下來，只剩下茶湯在杯..."</p>
+            <span class="history-date">Facebook 粉絲團貼文</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 茶知識 -->
   {posts.length > 0 && (
     <section class="blog-section">
@@ -613,4 +648,14 @@ const posts = (await getCollection('blog')).sort(
   @media (min-width: 1025px) {
     .region-grid { grid-template-columns: repeat(4, 1fr); }
   }
+
+  /* ======= FB HISTORY ======= */
+  .fb-history-section { background: var(--parchment); }
+  .history-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+  .history-card { background: white; border-radius: 6px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .history-img img { width: 100%; height: 200px; object-fit: cover; }
+  .history-content { padding: 1.5rem; }
+  .history-content p { color: var(--ink-muted); font-size: 0.95rem; font-style: italic; margin-bottom: 1rem; line-height: 1.6; }
+  .history-date { font-size: 0.75rem; color: var(--gold-dark); font-weight: 500; }
+
 </style>
