@@ -1,0 +1,273 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="嚴選茶品 - 88茶葉" description="探索 88茶葉為您精挑細選的台灣高山茶。阿里山、杉林溪、石棹珠露，限時優惠中！">
+  <!-- Hero -->
+  <section class="products-hero">
+    <div class="products-hero-content">
+      <span class="section-tag">嚴選茶品</span>
+      <h1>2026 春茶大賞<br/>最新採收，限量發售</h1>
+      <p>來自台灣四大名山，不妥協的品質承諾。<br/>即日起購買指定春茶，享有【買2送1】老客戶專屬優惠！</p>
+    </div>
+  </section>
+
+  <!-- Products List -->
+  <section class="products-list-section">
+    <div class="section-inner">
+      <div class="products-grid">
+        
+        <!-- Alishan -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/alishan_promo.jpg" alt="阿里山春茶" loading="lazy" />
+            <div class="product-badge">熱銷 NO.1</div>
+          </div>
+          <div class="product-info">
+            <span class="product-category">阿里山茶區 / 1200m+</span>
+            <h2>阿里山 頂級春茶</h2>
+            <div class="product-desc">
+              <p>雲霧繚繞的經典茶區，茶湯蜜綠金黃。這支春茶果膠質特別豐富，帶有阿里山特有的清幽花香，入口極度甘甜柔順，完全不苦澀，是每天喝都不會膩的大眾首選。</p>
+            </div>
+            <div class="product-price">
+              <span class="price-current">買 2 斤 送 1 斤</span>
+              <span class="price-note">共 3 斤 只要 <strong>$2,000</strong></span>
+            </div>
+            <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="product-cta">加 LINE 搶購 →</a>
+          </div>
+        </div>
+
+        <!-- Shanlinxi -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/tea-pour.jpg" alt="杉林溪春茶" loading="lazy" style="filter: brightness(0.9);" />
+            <div class="product-badge" style="background: var(--tea-green-deep);">行家推薦</div>
+          </div>
+          <div class="product-info">
+            <span class="product-category">杉林溪茶區 / 1600m+</span>
+            <h2>杉林溪 珍藏春茶</h2>
+            <div class="product-desc">
+              <p>愛喝「冷礦味」的老饕看過來！來自杉林溪高海拔，帶有獨特的冷礦山氣與竹杉香。茶湯清澈，口感厚實、層次豐富，吞下後回甘明顯，喉頭會一直維持甘甜的感覺。</p>
+            </div>
+            <div class="product-price">
+              <span class="price-current">買 2 斤 送 1 斤</span>
+              <span class="price-note">共 3 斤 只要 <strong>$2,000</strong></span>
+            </div>
+            <p class="mix-note">💡 可選 2斤杉林溪 + 1斤阿里山混搭</p>
+            <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="product-cta">加 LINE 搶購 →</a>
+          </div>
+        </div>
+
+        <!-- Zhulu -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/zhulu_promo.jpg" alt="石棹珠露" loading="lazy" />
+            <div class="product-badge" style="background: var(--gold-dark);">VIP 隱藏版</div>
+          </div>
+          <div class="product-info">
+            <span class="product-category">石棹茶區 / 頂級生茶</span>
+            <h2>阿里山 石棹珠露</h2>
+            <div class="product-desc">
+              <p>只有老客戶才收到的隱藏版！茶湯擁有極高雅的清香與鮮度，喉韻超級濃郁！一口喝下，回甘的感覺會在嘴裡繞很久，是行家指定的「極致回甘款」，喝過就回不去了。</p>
+            </div>
+            <div class="product-price">
+              <span class="price-current">買 3 斤 送 1 斤 梨山</span>
+              <span class="price-note">共 4 斤 只要 <strong>$3,600</strong></span>
+            </div>
+            <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="product-cta">加 LINE 搶購 →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Promise -->
+  <section class="promise-section">
+    <div class="section-inner text-center">
+      <h2>為什麼選擇 88茶葉？</h2>
+      <div class="promise-wrap">
+        <div class="promise-item">
+          <h3>📦 免運費 貨到付款</h3>
+          <p>買茶無壓力，在家收貨最安心</p>
+        </div>
+        <div class="promise-item">
+          <h3>💯 不滿意 包退費</h3>
+          <p>喝不習慣？我們無條件退換</p>
+        </div>
+        <div class="promise-item">
+          <h3>👩‍💼 真人客服 專業推薦</h3>
+          <p>不會選茶？加 LINE 由專人為您解答</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .products-hero {
+    background: linear-gradient(rgba(26, 38, 24, 0.7), rgba(26, 38, 24, 0.8)), url('/images/hero-tea.jpg') center/cover;
+    padding: 6rem 1.5rem;
+    text-align: center;
+    color: white;
+  }
+  .products-hero h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin: 1rem 0;
+    line-height: 1.4;
+  }
+  
+  .products-list-section {
+    padding: 4rem 1.5rem;
+    background: var(--parchment-warm);
+  }
+  .products-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .product-card {
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .product-image {
+    position: relative;
+    height: 100%;
+    min-height: 350px;
+  }
+  .product-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .product-badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: var(--tea-red);
+    color: white;
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+
+  .product-info {
+    padding: 3rem 3rem 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product-category {
+    font-size: 0.8rem;
+    color: var(--gold-dark);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .product-info h2 {
+    font-size: 2rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .product-desc {
+    color: var(--ink-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .product-price {
+    background: var(--parchment);
+    padding: 1.2rem;
+    border-left: 4px solid var(--gold);
+    margin-bottom: 1.5rem;
+  }
+  .price-current {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--tea-red);
+    margin-bottom: 0.3rem;
+  }
+  .price-note {
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+  .price-note strong {
+    font-size: 1.3rem;
+    color: var(--ink);
+  }
+  .mix-note {
+    font-size: 0.85rem;
+    color: var(--tea-green-deep);
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .product-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--ink) !important;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-align: center;
+    transition: all var(--transition);
+    align-self: flex-start;
+  }
+  .product-cta:hover {
+    background: var(--gold-dark);
+    color: white !important;
+  }
+
+  /* Promise */
+  .promise-section {
+    background: white;
+    padding: 4rem 1.5rem;
+  }
+  .promise-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+  .promise-item h3 {
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+  .promise-item p {
+    color: var(--ink-muted);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .product-card {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .product-image {
+      min-height: 250px;
+    }
+    .product-info {
+      padding: 2rem;
+    }
+    .product-cta {
+      width: 100%;
+    }
+  }
+</style>
