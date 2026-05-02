@@ -22,6 +22,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
         uses: withastro/action@v3
+        with:
+          node-version: 22
         # 💡 若未來編譯失敗，可用 VS Code GitHub Actions 擴充功能，
         # 在此步驟設定中斷點 (Breakpoint) 進行遠端除錯！
 
