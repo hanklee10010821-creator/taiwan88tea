@@ -125,6 +125,55 @@ const posts = (await getCollection('blog')).sort(
     </div>
   </section>
 
+  
+  <!-- 安心保證 -->
+  <section class="trust-section">
+    <div class="section-inner trust-layout">
+      <div class="trust-img">
+        <div class="trust-badge">SGS</div>
+        <img src="/images/tea-pour.jpg" alt="茶葉檢驗" loading="lazy" style="filter: brightness(0.8) sepia(0.2);" />
+      </div>
+      <div class="trust-text">
+        <span class="section-tag">安心保證</span>
+        <h2>100% 台灣茶，無農藥殘留</h2>
+        <p>每一批 88茶葉 上架前，皆通過 SGS 國家級農藥殘留檢驗，426 項農藥皆未檢出 (ND)。</p>
+        <ul class="trust-list">
+          <li>✔️ 拒絕混充：保證 100% 台灣高山茶，絕不混入低價進口茶。</li>
+          <li>✔️ 嚴格把關：不使用化學香精，所有花香、冷礦味皆為天然茶氣。</li>
+          <li>✔️ 退費承諾：只要喝不習慣，不用任何理由，全額退換貨。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常見問題 FAQ -->
+  <section class="faq-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">顧客問答</span>
+        <h2>常見問題 FAQ</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h4>Q: 我怕茶太苦澀，推薦哪一款？</h4>
+          <p>A: 推薦您選擇【阿里山春茶】。它的果膠質最豐富，口感非常甘甜柔順，是入門與怕苦澀茶友的最佳選擇。</p>
+        </div>
+        <div class="faq-card">
+          <h4>Q: 下單後大約多久可以收到？</h4>
+          <p>A: 我們採用新竹物流宅配，通常今天下單，明天出貨，後天就能送達您手中（偏遠地區約需多1-2天）。</p>
+        </div>
+        <div class="faq-card">
+          <h4>Q: 買 2 送 1 可以混搭嗎？</h4>
+          <p>A: 可以的！阿里山與杉林溪可以任意混搭（例如 2斤阿里山 + 1斤杉林溪）。</p>
+        </div>
+        <div class="faq-card">
+          <h4>Q: 如果真的喝不習慣怎麼辦？</h4>
+          <p>A: 沒問題！只要您保持剩下的茶葉包裝完整，聯繫我們的 LINE 客服，我們將為您安排退費或換茶，買茶零風險。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 大圖 Banner -->
   <section class="mid-banner">
     <img src="/images/tea-leaves.jpg" alt="茶葉" class="mid-banner-bg" loading="lazy" />
@@ -657,5 +706,29 @@ const posts = (await getCollection('blog')).sort(
   .history-content { padding: 1.5rem; }
   .history-content p { color: var(--ink-muted); font-size: 0.95rem; font-style: italic; margin-bottom: 1rem; line-height: 1.6; }
   .history-date { font-size: 0.75rem; color: var(--gold-dark); font-weight: 500; }
+
+
+  /* ======= TRUST SECTION ======= */
+  .trust-section { background: white; padding: 4rem 1.5rem; }
+  .trust-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .trust-img { position: relative; overflow: hidden; border-radius: 6px; }
+  .trust-img img { width: 100%; height: 350px; object-fit: cover; }
+  .trust-badge { position: absolute; top: 1.5rem; left: 1.5rem; background: var(--gold); color: var(--ink); padding: 0.5rem 1.5rem; font-weight: 800; font-size: 1.2rem; z-index: 10; letter-spacing: 0.1em; }
+  .trust-text h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--ink); }
+  .trust-text p { color: var(--ink-muted); margin-bottom: 1.5rem; line-height: 1.8; }
+  .trust-list { list-style: none; }
+  .trust-list li { margin-bottom: 0.8rem; color: var(--ink-muted); display: flex; align-items: flex-start; gap: 0.5rem; }
+
+  /* ======= FAQ SECTION ======= */
+  .faq-section { background: var(--parchment-warm); padding: 4rem 1.5rem; }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto; }
+  .faq-card { background: white; padding: 2rem; border-radius: 4px; box-shadow: var(--shadow-sm); }
+  .faq-card h4 { color: var(--tea-green-deep); margin-bottom: 1rem; font-size: 1.1rem; }
+  .faq-card p { color: var(--ink-muted); font-size: 0.95rem; line-height: 1.7; }
+  
+  @media (max-width: 768px) {
+    .trust-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .faq-grid { grid-template-columns: 1fr; }
+  }
 
 </style>
