@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="88茶葉">
+  <rect width="128" height="128" rx="24" fill="#173324"/>
+  <path d="M98 20c-20 2-33 11-38 27 16 1 31-7 38-27Z" fill="#e0bd72"/>
+  <path d="M61 48c9-11 20-18 34-24" fill="none" stroke="#e0bd72" stroke-width="4" stroke-linecap="round"/>
+  <g fill="#e0bd72">
+    <circle cx="44" cy="69" r="13"/><circle cx="44" cy="94" r="14"/>
+    <circle cx="80" cy="69" r="13"/><circle cx="80" cy="94" r="14"/>
+  </g>
+  <g fill="#173324">
+    <circle cx="44" cy="69" r="5.5"/><circle cx="44" cy="94" r="6.5"/>
+    <circle cx="80" cy="69" r="5.5"/><circle cx="80" cy="94" r="6.5"/>
+  </g>
+</svg>
