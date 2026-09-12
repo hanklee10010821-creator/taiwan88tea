@@ -2,13 +2,13 @@
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="嚴選茶品 - 88茶葉" description="探索 88茶葉為您精挑細選的台灣高山茶。阿里山、杉林溪、石棹珠露，限時優惠中！">
+<Base title="嚴選茶品 - 88茶葉" description="探索 88茶葉嚴選的梨山農會春茶比賽三星獎、阿里山、杉林溪與石棹珠露，台灣高山茶宅配到府。">
   <!-- Hero -->
   <section class="products-hero">
     <div class="products-hero-content">
       <span class="section-tag">嚴選茶品</span>
       <h1>2026 春茶大賞<br/>最新採收，限量發售</h1>
-      <p>來自台灣四大名山，不妥協的品質承諾。<br/>即日起購買指定春茶，享有【買2送1】老客戶專屬優惠！</p>
+      <p>本期主打【梨山農會春茶比賽三星獎】。<br/>另有阿里山、杉林溪指定春茶【買2送1】優惠！</p>
     </div>
   </section>
 
@@ -16,6 +16,34 @@ import Base from '../layouts/Base.astro';
   <section class="products-list-section">
     <div class="section-inner">
       <div class="products-grid">
+
+        <!-- Lishan Competition Tea -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/lishan-competition-3star-2026.jpg" alt="2026 梨山農會春茶比賽三星獎禮盒" loading="lazy" decoding="async" />
+            <div class="product-badge award-badge">本期主打・三星獎</div>
+          </div>
+          <div class="product-info">
+            <span class="product-category">梨山茶區 / 農會春茶比賽三星獎</span>
+            <h2>梨山農會春茶比賽三星獎</h2>
+            <div class="product-desc">
+              <p>嚴選梨山茶區手採青心烏龍春茶，茶葉翠綠飽滿，沖泡後茶湯清澈明亮；香氣乾淨清亮，入口甘醇、喉韻深。自己品飲有品質，送長輩或客戶也體面。</p>
+            </div>
+
+            <div class="brewing-guide award-facts">
+              <div class="brew-icon">🎁 300g 禮盒</div>
+              <div class="brew-icon">🌿 手採青心烏龍</div>
+              <div class="brew-icon">🏅 農會認證封條</div>
+            </div>
+
+            <div class="product-price">
+              <span class="price-current">2026 春茶比賽三星獎</span>
+              <span class="price-note">每盒 300g 優惠價 <strong>$1,800</strong></span>
+            </div>
+            <p class="mix-note">🎁 2 盒 $3,600 免運｜1 盒運費另計｜優惠至 2026/9/15</p>
+            <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="product-cta">加 LINE 訂購 →</a>
+          </div>
+        </div>
         
         <!-- Alishan -->
         <div class="product-card">
@@ -181,6 +209,22 @@ import Base from '../layouts/Base.astro';
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.1em;
+  }
+  .award-badge {
+    background: var(--gold-dark);
+  }
+  .award-facts {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .award-facts .brew-icon {
+    background: var(--parchment);
+    color: var(--ink);
+    padding: 0.55rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
   }
 
   .product-info {
