@@ -79,12 +79,12 @@ tags: ["茶葉保存", "新手入門"]
 
 ---
 
-*想買到新鮮直送的台灣高山茶？[加我們 LINE](https://line.me/ti/p/%40wgc0409f)，我們的茶葉從產地到你手中，新鮮有保障！*
+*想挑選適合保存與日常品飲的台灣高山茶？[加我們 LINE](https://line.me/R/oaMessage/%40wgc0409f/?%E6%88%91%E5%BE%9E88%E8%8C%B6%E8%91%89%E7%B6%B2%E7%AB%99%E9%83%A8%E8%90%BD%E6%A0%BC%E4%BE%86%EF%BC%8C%E6%83%B3%E8%AB%8B%E4%BD%A0%E5%B9%AB%E6%88%91%E9%81%B8%E8%8C%B6)，告訴我們需求，我們幫您挑選。*
 
 ---
 
 <div style="background: #f5efe6; padding: 2rem; border-radius: 8px; margin-top: 2rem; text-align: center; border: 1px solid #c8a96e;">
   <h3 style="color: #a68b4b; margin-top: 0; font-size: 1.3rem;">👇 懂茶的你，現在正是喝春茶的最佳時機！</h3>
   <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">88茶葉【2026早春高山茶】新鮮上市。阿里山/杉林溪 <strong>買2送1</strong>，免運貨到付款。</p>
-  <a href="https://line.me/ti/p/%40wgc0409f" style="display: inline-block; background: #4a6741; color: white; padding: 0.8rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 1rem; transition: background 0.3s;">點擊加 LINE，立刻挑選您的專屬好茶 →</a>
+  <a href="https://line.me/R/oaMessage/%40wgc0409f/?%E6%88%91%E5%BE%9E88%E8%8C%B6%E8%91%89%E7%B6%B2%E7%AB%99%E9%83%A8%E8%90%BD%E6%A0%BC%E4%BE%86%EF%BC%8C%E6%83%B3%E8%AB%8B%E4%BD%A0%E5%B9%AB%E6%88%91%E9%81%B8%E8%8C%B6" style="display: inline-block; background: #4a6741; color: white; padding: 0.8rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 1rem; transition: background 0.3s;">點擊加 LINE，請客服幫您選茶 →</a>
 </div>

@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { lineMessageUrl, lineMessages } from '../lib/line';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
@@ -11,8 +12,8 @@ const posts = (await getCollection('blog')).sort(
 
   <!-- Promo Banner -->
   <div style="background: var(--gold-dark); color: white; text-align: center; padding: 0.8rem 1rem; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.05em; position: relative; z-index: 10;">
-    🌟 <b>【2026早春採收】</b>頂級高山生茶，新鮮下山！阿里山 vs 杉林溪，老客戶回饋 <b>買 2 斤送 1 斤</b> (限量) 
-    <a href="https://line.me/ti/p/%40wgc0409f" style="color: white; text-decoration: underline; margin-left: 10px; font-weight: bold;">點此加 LINE 領取優惠 →</a>
+    🏆 <b>本期主打｜梨山農會春茶比賽三星獎</b>　300g 禮盒每盒 NT$1,800，2盒免運
+    <a href="/products/lishan-competition-3star" style="color: white; text-decoration: underline; margin-left: 10px; font-weight: bold;">查看完整介紹 →</a>
   </div>
 
   <!-- Hero -->
@@ -39,7 +40,7 @@ const posts = (await getCollection('blog')).sort(
           <span class="stat-label">退費保證</span>
         </div>
       </div>
-      <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="hero-cta">
+      <a href={lineMessageUrl(lineMessages.home)} target="_blank" rel="noopener" class="hero-cta">
         加 LINE 選茶 →
       </a>
     </div>
@@ -181,7 +182,7 @@ const posts = (await getCollection('blog')).sort(
     <div class="mid-banner-content">
       <span class="section-tag section-tag-light">品質承諾</span>
       <h2>138 則五星好評<br/>7,500+ 茶友的選擇</h2>
-      <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="banner-cta">立即體驗 →</a>
+      <a href={lineMessageUrl(lineMessages.home)} target="_blank" rel="noopener" class="banner-cta">請 LINE 客服幫我選茶 →</a>
     </div>
   </section>
 
@@ -254,7 +255,7 @@ const posts = (await getCollection('blog')).sort(
       <span class="section-tag section-tag-light">開始品茶</span>
       <h2>想喝好茶？<br/>加我們 LINE 就對了</h2>
       <p>專人為你推薦最適合的茶葉</p>
-      <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="cta-btn">
+      <a href={lineMessageUrl(lineMessages.home)} target="_blank" rel="noopener" class="cta-btn">
         加 LINE 好友 →
       </a>
     </div>

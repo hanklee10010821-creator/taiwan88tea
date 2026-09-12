@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { lineMessageUrl, lineMessages } from '../lib/line';
 ---
 
 <Base title="關於我們 - 88茶葉" description="了解 88茶葉的尋茶故事與品質承諾。我們堅持產地直送，不滿意包退。">
@@ -89,7 +90,7 @@ import Base from '../layouts/Base.astro';
     <div class="cta-inner">
       <h2>想找適合自己的茶？</h2>
       <p>點擊下方加入官方 LINE，由專屬客服為您量身推薦</p>
-      <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="cta-btn">
+      <a href={lineMessageUrl(lineMessages.about)} target="_blank" rel="noopener" class="cta-btn">
         加 LINE 諮詢 →
       </a>
     </div>

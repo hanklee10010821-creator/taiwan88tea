@@ -53,6 +53,6 @@ category: '春茶選購指南'
   <p style="font-size: 1.4rem; font-weight: bold; color: #8b3a3a; margin-bottom: 1.5rem;">👑 優惠：買 3 斤直接送 1 斤頂級梨山茶，共 4 斤只要 $3,600！</p>
   <p style="font-size: 0.95rem; color: #6b5e54; margin-bottom: 2rem;">*(此方案為獨立高單價專案，恕無法與方案一混搭，免運貨到付款)*</p>
 
-  <a href="https://line.me/ti/p/%40wgc0409f" style="display: inline-block; background: #4a6741; color: white; padding: 0.8rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 1.1rem; transition: background 0.3s;">👉 點擊加 LINE，領取春茶優惠</a>
+  <a href="https://line.me/R/oaMessage/%40wgc0409f/?%E6%88%91%E5%BE%9E88%E8%8C%B6%E8%91%89%E7%B6%B2%E7%AB%99%E9%83%A8%E8%90%BD%E6%A0%BC%E4%BE%86%EF%BC%8C%E6%83%B3%E8%AB%8B%E4%BD%A0%E5%B9%AB%E6%88%91%E9%81%B8%E8%8C%B6" style="display: inline-block; background: #4a6741; color: white; padding: 0.8rem 2rem; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 1.1rem; transition: background 0.3s;">👉 點擊加 LINE，詢問本期春茶</a>
   <p style="font-size: 0.85rem; color: #6b5e54; margin-top: 1rem;">（加入後直接在選單點擊「我要訂購」，或輸入您要的方案！）</p>
 </div>

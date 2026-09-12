@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { lineMessageUrl, lineMessages } from '../lib/line';
 ---
 
 <Base title="嚴選茶品 - 88茶葉" description="探索 88茶葉嚴選的梨山農會春茶比賽三星獎、阿里山、杉林溪與石棹珠露，台灣高山茶宅配到府。">
@@ -41,7 +42,10 @@ import Base from '../layouts/Base.astro';
               <span class="price-note">每盒 300g 優惠價 <strong>$1,800</strong></span>
             </div>
             <p class="mix-note">🎁 2 盒 $3,600 免運｜1 盒運費另計｜優惠至 2026/9/15</p>
-            <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="product-cta">加 LINE 訂購 →</a>
+            <div class="product-actions">
+              <a href="/products/lishan-competition-3star" class="product-secondary">查看完整介紹</a>
+              <a href={lineMessageUrl(lineMessages.awardLishan)} target="_blank" rel="noopener" class="product-cta">加 LINE 訂購 →</a>
+            </div>
           </div>
         </div>
         
@@ -68,7 +72,7 @@ import Base from '../layouts/Base.astro';
               <span class="price-current">買 2 斤 送 1 斤</span>
               <span class="price-note">共 3 斤 只要 <strong>$2,000</strong></span>
             </div>
-            <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="product-cta">加 LINE 搶購 →</a>
+            <a href={lineMessageUrl(lineMessages.alishan)} target="_blank" rel="noopener" class="product-cta">加 LINE 詢問 →</a>
           </div>
         </div>
 
@@ -96,7 +100,7 @@ import Base from '../layouts/Base.astro';
               <span class="price-note">共 3 斤 只要 <strong>$2,000</strong></span>
             </div>
             <p class="mix-note">💡 可選 2斤杉林溪 + 1斤阿里山混搭</p>
-            <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="product-cta">加 LINE 搶購 →</a>
+            <a href={lineMessageUrl(lineMessages.shanlinxi)} target="_blank" rel="noopener" class="product-cta">加 LINE 詢問 →</a>
           </div>
         </div>
 
@@ -123,7 +127,7 @@ import Base from '../layouts/Base.astro';
               <span class="price-current">買 3 斤 送 1 斤 梨山</span>
               <span class="price-note">共 4 斤 只要 <strong>$3,600</strong></span>
             </div>
-            <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="product-cta">加 LINE 搶購 →</a>
+            <a href={lineMessageUrl(lineMessages.zhulu)} target="_blank" rel="noopener" class="product-cta">加 LINE 詢問 →</a>
           </div>
         </div>
 
@@ -175,6 +179,18 @@ import Base from '../layouts/Base.astro';
     display: flex;
     flex-direction: column;
     gap: 4rem;
+  }
+  .product-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .product-secondary {
+    color: var(--tea-green-deep);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
   }
   
   .product-card {

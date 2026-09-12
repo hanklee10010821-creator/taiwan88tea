@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { lineMessageUrl } from '../../lib/line';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -38,7 +39,7 @@ const { Content } = await render(post);
           <span>🍃</span>
         </div>
         <p>想嚐嚐正宗台灣高山茶？</p>
-        <a href="https://line.me/ti/p/%40wgc0409f" target="_blank" rel="noopener" class="cta-button">加 LINE 選茶下單 →</a>
+        <a href={lineMessageUrl(`我看了「${post.data.title}」文章，想請你幫我選茶`)} target="_blank" rel="noopener" class="cta-button">加 LINE 選茶下單 →</a>
       </div>
     </div>
   </article>

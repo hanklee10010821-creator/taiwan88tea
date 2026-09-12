@@ -50,4 +50,4 @@ description: "買了頂級的台灣高山茶，卻總是泡不出茶行裡試喝
 我們的「阿里山春茶」與「杉林溪春茶」現在享有 **買 2 斤送 1 斤** 的超殺優惠。搭配上面教的黃金泡法，保證讓你每天都有一杯幸福的好茶。
 
 👇 **想找適合你的茶？直接點擊下方加入官方 LINE，由專屬客服（茶姑娘）為您推薦：**
-<a href="https://line.me/ti/p/%40wgc0409f" target="_blank" style="display:inline-block; background-color:#20281E; color:#C8A96E; padding:10px 20px; text-decoration:none; font-weight:bold; margin-top:10px;">加 LINE 領取優惠 →</a>
+<a href="https://line.me/R/oaMessage/%40wgc0409f/?%E6%88%91%E5%BE%9E88%E8%8C%B6%E8%91%89%E7%B6%B2%E7%AB%99%E9%83%A8%E8%90%BD%E6%A0%BC%E4%BE%86%EF%BC%8C%E6%83%B3%E8%AB%8B%E4%BD%A0%E5%B9%AB%E6%88%91%E9%81%B8%E8%8C%B6" target="_blank" style="display:inline-block; background-color:#20281E; color:#C8A96E; padding:10px 20px; text-decoration:none; font-weight:bold; margin-top:10px;">加 LINE 詢問選茶 →</a>
