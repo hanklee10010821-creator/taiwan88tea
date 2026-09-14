@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { lineMessageUrl, lineMessages } from '../../lib/line';
 
 const lineUrl = lineMessageUrl(lineMessages.awardLishan);
+const zhuluLineUrl = lineMessageUrl(lineMessages.zhulu);
 ---
 
 <Base
@@ -23,7 +24,7 @@ const lineUrl = lineMessageUrl(lineMessages.awardLishan);
         <div class="price-block">
           <span>300g（半斤）禮盒</span>
           <strong>NT$1,800／盒</strong>
-          <p>2盒 NT$3,600 免運｜1盒運費另計</p>
+          <p>2盒 NT$3,600 免運｜1盒運費另計｜本批售完為止</p>
         </div>
         <a href={lineUrl} target="_blank" rel="noopener" class="primary-cta">用 LINE 詢問／訂購</a>
         <p class="cta-note">開啟 LINE 後會帶入商品名稱，送出即可接續詢問。</p>
@@ -57,8 +58,31 @@ const lineUrl = lineMessageUrl(lineMessages.awardLishan);
         <div><dt>規格</dt><dd>300g（半斤）禮盒</dd></div>
         <div><dt>包裝</dt><dd>提袋、農會認證封條</dd></div>
         <div><dt>優惠</dt><dd>每盒 NT$1,800；2盒 NT$3,600 免運</dd></div>
-        <div><dt>期限</dt><dd>優惠至 2026/9/15</dd></div>
+        <div><dt>期限</dt><dd>本批售完為止</dd></div>
       </dl>
+    </div>
+  </section>
+
+  <section class="compare-section">
+    <div class="content-shell">
+      <header class="section-heading">
+        <p class="eyebrow">依用途快速選茶</p>
+        <h2>送禮選比賽茶，自喝囤茶看珠露</h2>
+      </header>
+      <div class="compare-grid">
+        <article>
+          <span>送禮／重視認證</span>
+          <h3>梨山農會比賽三星獎</h3>
+          <p>300g 禮盒附提袋與農會認證封條，茶品來歷清楚，送長輩或客戶更好辨識。</p>
+          <a href={lineUrl} target="_blank" rel="noopener">詢問比賽茶 →</a>
+        </article>
+        <article>
+          <span>自己常喝／重視份量</span>
+          <h3>歷史熱銷石棹珠露</h3>
+          <p>茶感較厚實、回甘明顯，優惠組共 4 斤 NT$3,600，適合日常飲用與補茶。</p>
+          <a href={zhuluLineUrl} target="_blank" rel="noopener">比較石棹珠露 →</a>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -107,6 +131,13 @@ const lineUrl = lineMessageUrl(lineMessages.awardLishan);
   .primary-cta:hover { background: #20da6d; transform: translateY(-1px); }
   .cta-note { margin-top: .65rem; }
   .decision-section, .faq-section { background: var(--parchment); }
+  .compare-section { background: #18281d; color: white; padding: 0 1.5rem; }
+  .compare-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .compare-grid article { padding: 1.8rem; border: 1px solid rgba(200,169,110,.35); background: rgba(255,255,255,.04); }
+  .compare-grid span { color: var(--gold); font-size: .82rem; font-weight: 700; letter-spacing: .08em; }
+  .compare-grid h3 { margin: .65rem 0; }
+  .compare-grid p { color: rgba(255,255,255,.72); }
+  .compare-grid a { color: var(--gold-light); font-weight: 700; }
   .content-shell { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   .section-heading { max-width: 720px; margin-bottom: 2.4rem; }
   .section-heading h2, .facts-layout h2, .order-card h2 { font-size: clamp(1.7rem, 4vw, 2.35rem); }
@@ -130,7 +161,7 @@ const lineUrl = lineMessageUrl(lineMessages.awardLishan);
     .award-hero { padding-top: 6.7rem; }
     .award-shell, .facts-layout { grid-template-columns: 1fr; }
     .award-seal { right: .5rem; transform: translateY(28%); width: 78px; height: 78px; font-size: .85rem; }
-    .fit-grid, .faq-grid { grid-template-columns: 1fr; }
+    .fit-grid, .faq-grid, .compare-grid { grid-template-columns: 1fr; }
     .facts-layout { gap: 1.5rem; }
     .facts-list div { grid-template-columns: 5rem 1fr; }
     .order-card { align-items: flex-start; flex-direction: column; }
